@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo multiplication</title>
+</head>
+<body>
+    
+        <input type="number" id="multiplication">
+        <button id="btn">Valider</button>
+        <button id="btn2">Pile ou Face</button>
+
+    <script>
+            
+            //quand je click sur le bouton
+            const btn = document.getElementById("btn");
+            const multiplication = document.getElementById("multiplication");
+            const btn2 = document.getElementById("btn2");
+            
+
+        multiplication.value ="";
+
+        
+        btn.addEventListener("click", function(){
+            for (let i = 0; i <= 10; i++) {
+                //ça lance le calcul (multiplication) du chiffre de l'input de 0 à 10 
+               console.log(`${multiplication.value} fois ${i} est égale à ${multiplication.value * i}`); 
+
+            }
+        })
+
+        /* 
+            // Symbole de verification  
+            
+            On vérifie l'égalité sans la vérification de type
+            de a à b
+            // a == b
+
+            On vérifie que a est supérieur à b
+            a > b
+
+            On vérifie que a est supérieur ou égal à b
+            a >= b
+
+            On vérifie que a est inférieur à b
+            a < b 
+
+            On vérifie que a est inférieur ou égale à b
+            a <= b
+
+            On vérifie que a n'est pas égale à b
+            a != b
+
+            On vérifie que a est strictement égale à b
+            lors de cette verification on verifie le type
+            a === b
+
+        */
+
+        // pile ou face
+        // on ajoute un bouton et ça affiche aléatoirement pile ou face
+        // dans un console.log
+
+        btn2.addEventListener("click", function(){
+            //let pileOuFace = Math.random() > 0.5 ? "pile" : "face"
+            //console.log(pileOuFace);
+
+            if (Math.random() > 0.5) {
+                console.log("pile")
+            } else {
+                console.log("face")
+            }
+        })
+
+        
+
+
+
+    </script>
+</body>
+</html>
